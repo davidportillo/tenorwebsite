@@ -1,0 +1,27 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// FONTS
+ // @import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,100italic,300italic,400italic);
+
+// BOOTSTRAP OVERIDES
+$grid-gutter-width: 20px;
+$container-desktop: 1040px;
+$container-large-desktop: 1040px;
+// $font-family-sans-serif: 'Lato', sans-serif;
+$font-size-base: 16px;
+// $line-height-base: 1.611111111;
+
+//CUSTOM VARIABLES
+$max-width: 1440px;
+$purple-color: #2f2933;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        // "layout",
+        // "syntax-highlighting",
+        "bootstrap",
+        "base"
+;
