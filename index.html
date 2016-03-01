@@ -3,5 +3,15 @@ layout: default
 ---
 {% include carousel.html %}
 <!-- Tour Dates -->
+<section class="calendar">
+  <div class="container">
+    <div class="row">
+      {% for calendar in site.categories['calendar'] | limit:3 %}
+        {{ calendar.title }}
+        {{ calendar.date-all }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
 <!-- Acclaims -->
 <!-- Media -->
