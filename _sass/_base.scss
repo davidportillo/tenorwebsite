@@ -1,3 +1,6 @@
+a {
+	transition:0.3s;
+}
 body {
     // color: #2c3e50;
     background-color: #161E21;
@@ -7,5 +10,47 @@ body {
     max-width: $max-width;
     margin: 0 auto;
     position: relative;
-    background-color: #FFF;
+    background-color: #fff;
+}
+//COMMON
+.bg-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+}
+//HOME
+#myCarousel {
+	margin-top: -48px;
+}
+//SUBFOOTER
+.subfooter {
+	@extend .bg-img;
+	background-image: url('/images/subfooter-bg.png');
+	height: 500px;
+	text-align: center;
+    color: white;
+    padding-top: 220px;
+    margin-top: 96px;
+}
+.site-footer {
+	background-color: $dark-grey-color;
+	min-height: 422px;
+	padding-top: 64px;
+	color: $grey-color;
+	.site-footer-social {
+		padding-left: 0;
+		li {
+			display: inline;
+		}
+		.social-link {
+			color: #fff;
+		    font-size: 36px;
+		    padding-right: 10px;
+		    &:hover {
+		    	color: $dark-blue-color;
+		    }
+		}
+	}
 }

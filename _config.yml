@@ -17,13 +17,13 @@ url: "http://www.davidportillotenor.com/" # the base hostname & protocol for you
 permalink: /:categories/:title
 
 links:
-  - title: biography
+  - title: BIOGRAPHY
     url: /biography
-  - title: acclaims
+  - title: ACCLAIMS
     url: /acclaims
-  - title: calendar
+  - title: CALENDAR
     url: /calendar
-  - title: media
+  - title: MEDIA
     url: /media
 
 # Social Media
