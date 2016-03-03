@@ -1,0 +1,41 @@
+---
+layout: default
+title: Calendar
+permalink: /calendar/
+---
+<div class="header-image calendar-header-image">
+    <h1 class="text-center header-h1">{{ page.title }}</h1>
+</div>
+<div class="container calendar-page">
+    {% assign events_by_year = site.categories['calendar'] | group_by:"date-year" %}
+    {% for year in events_by_year %}
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center calendar-page-h2-year">{{year.name}}</h2>
+            </div>
+        </div>
+        {% for event in year.items %}
+            <div class="row">
+                <div class="col-md-2 col-md-offset-2">
+                    <h4 class="calendar-page-date">{{ event.date-all }}</h4>
+                    <hr class="calendar-page-date-hr">
+                    <h5 class="calendar-page-state">{{ event.location-state }}</h5>
+                </div>
+                <div class="text-center col-md-4">
+                    <h2 class="calendar-page-event-name">{{ event.title }}</h2>
+                    <h4 class="calendar-page-event-role">{{ event.role }}</h4>
+                </div>
+                <div class="col-md-2">
+                {% comment %}TODO: Add Logic for Recitals{% endcomment %}
+                    <h6 class="calendar-page-event-house">{{ event.opera-house }}</h6>
+                    <h6 class="calendar-page-event-location">{{ event.location-city }}, {{ event.location-state }}</h6>
+                    {% comment %}TODO: Add Logic for past events{% endcomment %}
+                    <a href="{{ event.ticket-link }}" class="btn btn-block btn-default">Tickets</a>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <hr class="site-row">
+                </div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>

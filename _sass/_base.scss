@@ -20,10 +20,39 @@ body {
     width: 100%;
     position: relative;
 }
+.header-image {
+	@extend .bg-img;
+	margin-top: -48px;
+	margin-bottom: 48px;
+	min-height: 380px;
+}
+.header-h1 {
+	padding-top: 128px;
+	color: $beige-color;
+	font-family: $serif;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 29px;
+	text-transform: uppercase;
+}
 //HOME
 #myCarousel {
 	margin-top: -48px;
 	margin-bottom: 48px;
+}
+
+//Calendar
+.calendar-header-image {
+	background-image: url('/images/calendar-bg.png');
+}
+.calendar-page {
+	.calendar-page-h2-year {
+		color: $dark-blue-color;
+		font-family: $light;
+		font-size: 48px;
+		line-height: 60px;
+		text-transform: uppercase;
+	}
 }
 //SUBFOOTER
 .subfooter {
