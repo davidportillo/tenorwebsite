@@ -1,0 +1,16 @@
+<section class="acclaims">
+  <div class="container">
+    <h2 class="text-center section-h2">Acclaims</h2>
+    {% assign featured-acclaims = site.categories['acclaim'] | where:"featured",true  %}
+  </div>
+  {% include acclaim-carousel.html %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <a href="/acclaims" class="section-more">View Acclaims <i class="fa fa-angle-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+</section>
