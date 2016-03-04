@@ -3,36 +3,7 @@ layout: default
 ---
 {% include carousel.html %}
 <!-- Tour Dates -->
-<section class="calendar">
-  <div class="container">
-    <h2 class="text-center section-h2">Tour Dates</h2>
-      {% assign current_time = site.time | date: "%s" %}
-      {% assign event_count = 0 %}
-      {% for calendar in site.categories['calendar'] reversed %}
-        {% assign upcoming_event = calendar.date-start | date: '%s' %}
-        {% if upcoming_event >= current_time and event_count < 3 %}
-        <div class="row">
-          <div class="col-md-2 col-md-offset-2">
-            <h4 class="text-center calendar-date">{{ calendar.date-start | date: '%b %d' }}</h4>
-            <hr class="calendar-hr">
-            <h5 class="text-center calendar-state">{{ calendar.location-state }}</h5>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-center calendar-h4">{{ calendar.title }}</h4>
-          </div>
-          <div class="col-md-2 col-md-offset-1">
-            <a href="{{ calendar.ticket-link }}" class="btn btn-block btn-default">Tickets</a>
-          </div>
-          {% assign event_count = event_count | plus:1 %}
-        </div>
-        {% endif %}
-      {% endfor %}
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <a href="/calendar" class="section-more">View Calendar <i class="fa fa-angle-right"></i></a>
-        </div>
-      </div>
-  </div>
-</section>
+{% include home-calendar.html %}
 <!-- Acclaims -->
+{% include home-acclaims.html %}
 <!-- Media -->

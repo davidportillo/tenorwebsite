@@ -40,6 +40,35 @@ body {
 	margin-top: -48px;
 	margin-bottom: 48px;
 }
+#acclaims-carousel {
+	@extend #myCarousel;
+    background-color: $dark-grey-color;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    .carousel-content {
+    	color:white;
+    	font-size: 24px;
+	    display:flex;
+	    align-items:center;
+	    font-style: italic;
+
+    	a {
+    		text-align: center;
+    		color: white;
+    		&:hover {
+    			text-decoration: none;
+    		}
+    	}
+	    span {
+		    float: right;
+		    color: $orange-color;
+		    font-style: normal;
+		    font-size: 18px;
+		}
+	}
+
+}
 
 //Calendar
 .calendar-header-image {
