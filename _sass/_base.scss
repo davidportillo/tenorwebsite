@@ -72,7 +72,7 @@ body {
 
 //Calendar
 .calendar-header-image {
-	background-image: url('/images/calendar-bg.png');
+	background-image: url('../images/calendar-bg.png');
 }
 .calendar-page {
 	.calendar-page-h2-year {
@@ -83,10 +83,15 @@ body {
 		text-transform: uppercase;
 	}
 }
+//Acclaims
+.acclaims-header-image {
+	background-image: url('../images/acclaim-header-bg.png');
+}
+
 //SUBFOOTER
 .subfooter {
 	@extend .bg-img;
-	background-image: url('/images/subfooter-bg.png');
+	background-image: url('../images/subfooter-bg.png');
 	height: 500px;
 	text-align: center;
     color: white;

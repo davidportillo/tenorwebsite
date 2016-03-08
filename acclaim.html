@@ -1,0 +1,46 @@
+---
+layout: default
+title: Acclaims
+permalink: /acclaims/
+---
+<div class="header-image acclaims-header-image">
+    <h1 class="text-center header-h1">{{ page.title }}</h1>
+</div>
+<div class="container acclaim-page">
+    <section class="publications">
+        <h2 class="text-center acclaims-h2">Press Features</h2>
+        {% assign publications = site.categories['acclaim'] | where:"type","publication" %}
+            {% for pub in publications %}
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ pub.img }}" alt="" class="center-block acclaim-img">
+                    </div>
+                    <div class="col-md-7 col-md-offset-1">
+                        <p class="acclaim-snippet">{{ pub.snippet }}</p>
+                        <a target="_blank" href="{{ pub.acclaim-link }}" class="acclaim-link">-{{ pub.reviewer }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+    </section>
+
+    <section class="acclaims">
+        <h2 class="text-center acclaims-h2">Acclaims</h2>
+        {% assign acclaims = site.categories['acclaim'] | where:"type","review" | group_by:"role" %}
+        {% for acclaim_roles in acclaims %}
+                <h2> {{ acclaim_roles.name }} </h2>
+            {% for acclaim in acclaim_roles.items %}
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ acclaim.img }}" alt="" class="center-block acclaim-img">
+                    </div>
+                    <div class="col-md-7 col-md-offset-1">
+                        <p class="acclaim-snippet">{{ acclaim.snippet }}</p>
+                        <a target="_blank" href="{{ acclaim.acclaim-link }}" class="acclaim-link">-{{ acclaim.reviewer }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </section>
+
+
+</div>
