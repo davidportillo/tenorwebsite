@@ -30,10 +30,13 @@ permalink: /acclaims/
                 <h2> {{ acclaim_roles.name }} </h2>
             {% for acclaim in acclaim_roles.items %}
                 <div class="row">
-                    <div class="col-md-4">
-                        <img src="{{ acclaim.img }}" alt="" class="center-block acclaim-img">
-                    </div>
-                    <div class="col-md-7 col-md-offset-1">
+                    {% if forloop.first == true %}
+                        <div class="col-md-4">
+                            <img src="{{ acclaim.img }}" alt="" class="center-block acclaim-img">
+                        </div>
+                    {% endif %}
+
+                    <div class="col-md-7 col-md-offset-5">
                         <p class="acclaim-snippet">{{ acclaim.snippet }}</p>
                         <a target="_blank" href="{{ acclaim.acclaim-link }}" class="acclaim-link">-{{ acclaim.reviewer }}</a>
                     </div>
