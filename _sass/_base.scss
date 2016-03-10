@@ -88,6 +88,10 @@ body {
 	background-image: url('../images/acclaim-header-bg.png');
 }
 
+//Media
+.media-header-image {
+	background-image: url('../images/media-header-bg.png');
+}
 //SUBFOOTER
 .subfooter {
 	@extend .bg-img;
