@@ -6,7 +6,7 @@
       {% for calendar in site.categories['calendar'] reversed %}
         {% assign upcoming_event = calendar.date-start | date: '%s' %}
         {% if upcoming_event >= current_time and event_count < 3 %}
-        <div class="row">
+        <div class="row calendar-row">
           <div class="col-md-2 col-md-offset-2">
             <h4 class="text-center calendar-date">{{ calendar.date-start | date: '%b %d' }}</h4>
             <hr class="calendar-hr">

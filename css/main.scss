@@ -20,6 +20,9 @@ $light-blue-color: #006699;
 $orange-color: #e58e1a;
 $grey-color: #818386;
 $dark-grey-color: #262b2e;
+$btn-default-border: $dark-blue-color;
+$btn-default-color: $dark-blue-color;
+$btn-default-bg: transparent;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

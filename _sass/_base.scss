@@ -5,6 +5,16 @@ body {
     // color: #2c3e50;
     background-color: #161E21;
 }
+
+h2 {
+	color: $dark-blue-color;
+	font-family: $serif;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 60px;
+	text-transform: uppercase;
+	margin-bottom: 48px;
+}
 .wrap {
     overflow: hidden;
     max-width: $max-width;
@@ -34,6 +44,14 @@ body {
 	font-weight: 400;
 	line-height: 29px;
 	text-transform: uppercase;
+}
+.btn-default {
+	text-transform: uppercase;
+	padding: 18px 12px;
+	&:hover {
+		background-color: $dark-blue-color;
+		color: white;
+	}
 }
 //HOME
 #myCarousel {
@@ -67,7 +85,40 @@ body {
 		    font-size: 18px;
 		}
 	}
-
+}
+.calendar {
+	.calendar-row {
+		margin-bottom: 24px;
+	}
+	.calendar-date {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 28px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.calendar-state {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 26px;
+		font-weight: 700;
+	}
+	.calendar-hr {
+		margin-top: -4px;
+    	margin-bottom: -8px;
+		width: 39px;
+		background-color: $orange-color;
+		border: 1px solid $orange-color;
+	}
+	.calendar-h4{
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 32px;
+		font-weight: 600;
+		font-style: italic;
+		text-transform: uppercase;
+		margin-top: 0;
+	}
 }
 
 //Calendar
