@@ -1,0 +1,75 @@
+- id: gallery1
+  opera-title: Die Meistersinger
+  role: David
+  opera-house: Lyric Opera of Chicago
+  year: 2013
+  photographer: ©Dan Rest
+  imagefolder: /images/media
+  images:
+  - name: david1.jpg
+  - name: david2.jpg
+  - name: david3.jpg
+  - name: david4.jpg
+- id: gallery2
+  opera-title: Die Zauberflöte
+  role: Tamino
+  opera-house: Houston Grand Opera
+  year: 2014
+  photographer: ©Lynn Lane
+  imagefolder: /images/media
+  images:
+  - name: magic_flute1.jpg
+  - name: magic_flute2.jpg
+  - name: magic_flute3.jpg
+  - name: magic_flute4.jpg
+  - name: magic_flute5.jpg
+  - name: magic_flute6.jpg
+  - name: magic_flute7.jpg
+  - name: magic_flute8.jpg
+  - name: magic_flute9.jpg
+  - name: magic_flute10.jpg
+  - name: magic_flute11.jpg
+  - name: magic_flute12.jpg
+- id: gallery3
+  opera-title: Don Giovanni
+  role: Don Ottavio
+  opera-house: Opera Philadelphia
+  year: 2014
+  photographer: ©Kelly & Massa
+  imagefolder: /images/media
+  images:
+  - name: don_ottavio1.jpg
+  - name: don_ottavio2.jpg
+  - name: don_ottavio3.jpg
+- id: gallery4
+  opera-title: La Fille du Regiment
+  role: Tonio
+  opera-house: Fort Worth Opera
+  year: 2013
+  photographer:
+  imagefolder: /images/media
+  images:
+  - name: daughter1.jpg
+  - name: daughter2.jpg
+  - name: daughter3.jpg
+  - name: daughter4.jpg
+  - name: daughter5.jpg
+- id: gallery5
+  opera-title: Cosi fan Tutte
+  role: Ferrando
+  opera-house: Opera Theatre of Saint Louis
+  year: 2011
+  photographer:
+  imagefolder: /images/media
+  images:
+  - name: ferrando.jpg
+- id: gallery6
+  opera-title: Barber of Seville
+  role: Count Almaviva
+  opera-house: Metropolitan Opera
+  year: 2015
+  photographer:
+  imagefolder: /images/media
+  images:
+  - name: barber1.jpg
+  - name: barber2.jpg
