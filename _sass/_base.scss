@@ -47,11 +47,18 @@ h2 {
 }
 .btn-default {
 	text-transform: uppercase;
-	padding: 18px 12px;
+	padding: 19px 12px;
 	&:hover {
 		background-color: $dark-blue-color;
 		color: white;
 	}
+}
+.section-more {
+	color: $light-blue-color;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 60px;
+	font-family: $sans;
 }
 //HOME
 #myCarousel {
@@ -100,7 +107,7 @@ h2 {
 	.calendar-state {
 		color: $dark-blue-color;
 		font-family: $sans;
-		font-size: 26px;
+		font-size: 19px;
 		font-weight: 700;
 	}
 	.calendar-hr {
@@ -132,6 +139,51 @@ h2 {
 		font-size: 48px;
 		line-height: 60px;
 		text-transform: uppercase;
+	}
+	.calendar-page-date {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 22px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.calendar-page-date-hr {
+		width: 39px;
+		background-color: $orange-color;
+		border: 1px solid $orange-color;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 16px;
+	}
+	.calendar-page-state {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 20px;
+		font-weight: 700;
+	}
+	.calendar-page-event-name {
+		color: $dark-blue-color;
+		text-transform: uppercase;
+		font-family: $sans;
+		font-size: 28px;
+		font-weight: 600;
+		font-style: italic;
+		margin-top: 0;
+		line-height: 36px;
+	}
+	.calendar-page-event-role {
+		color: $dark-blue-color;
+		text-transform: capitilize;
+		font-family: $serif;
+		font-size: 18px;
+		font-weight: 200;
+		margin-top: -40px;
+	}
+	.calendar-page-event-house, .calendar-page-event-location {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 16px;
+		font-weight: 400;
 	}
 }
 //Acclaims
@@ -187,7 +239,7 @@ h2 {
 		    font-size: 36px;
 		    padding-right: 10px;
 		    &:hover {
-		    	color: $dark-blue-color;
+		    	color: $orange-color;
 		    }
 		}
 	}
