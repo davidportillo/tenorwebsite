@@ -62,12 +62,19 @@ h2, .section-h2 {
 	font-family: $sans;
 }
 //HOME
+.more {
+	margin-bottom: 96px;
+}
+.more-last {
+	margin-bottom: 0;
+}
 #myCarousel {
 	margin-top: -48px;
 	margin-bottom: 48px;
 }
 #acclaims-carousel {
 	@extend #myCarousel;
+	margin-top: -14px;
     background-color: $dark-grey-color;
     padding-top: 48px;
     padding-bottom: 48px;
