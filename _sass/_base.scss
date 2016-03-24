@@ -227,6 +227,13 @@ h2, .section-h2 {
 	    	background: rgba(black, 0.8);
 	    	width: 100%;
     		color: $beige-color;
+    		.role-title {
+				font-family: $serif;
+				font-size: 30px;
+				font-weight: 300;
+				font-style: italic;
+				line-height: 34px;
+    		}
 	    }
 	}
 }
