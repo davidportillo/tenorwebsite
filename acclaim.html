@@ -11,15 +11,18 @@ permalink: /acclaims/
         <h2 class="text-center acclaims-h2">Press Features</h2>
         {% assign publications = site.categories['acclaim'] | where:"type","publication" %}
             {% for pub in publications %}
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="{{ pub.img }}" alt="" class="center-block acclaim-img">
+                <article class="publication">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{{ pub.img }}" alt="" class="center-block img-responsive acclaim-img">
+                        </div>
+                        <div class="col-md-7 col-md-offset-1 clearfix">
+                            <p class="acclaim-snippet">{{ pub.snippet }}</p>
+                            <a target="_blank" href="{{ pub.acclaim-link }}" class="pull-right acclaim-link">-{{ pub.reviewer }}</a>
+                        </div>
                     </div>
-                    <div class="col-md-7 col-md-offset-1">
-                        <p class="acclaim-snippet">{{ pub.snippet }}</p>
-                        <a target="_blank" href="{{ pub.acclaim-link }}" class="acclaim-link">-{{ pub.reviewer }}</a>
-                    </div>
-                </div>
+                </article>
+
             {% endfor %}
     </section>
 
@@ -27,27 +30,34 @@ permalink: /acclaims/
         <h2 class="text-center acclaims-h2">Acclaims</h2>
         {% assign acclaims = site.categories['acclaim'] | where:"type","review" | group_by:"role" %}
         {% for acclaim_roles in acclaims %}
-            <h2> {{ acclaim_roles.name }} </h2>
-            <div class="row">
-            {% assign acclaim_count = 0 %}
-            {% for acclaim in acclaim_roles.items %}
-                {% if forloop.first == true %}
-                    <div class="col-md-4">
-                        <img src="{{ acclaim.img }}" alt="" class="center-block acclaim-img">
-                    </div>
-                {% endif %}
+            <!-- <h2> {{ acclaim_roles.name }} </h2> -->
+            <article class="publication">
+                <div class="row">
+                {% assign acclaim_count = 0 %}
+                {% for acclaim in acclaim_roles.items %}
+                    {% if forloop.first == true %}
+                        <div class="col-md-4">
+                            <div class="center-block acclaim-img" style="background-image: url('{{ acclaim.img  }}');">
+                                <div class="role-bg">
+                                    <h4 class="text-center role-title">{{ acclaim.role }}</h4>
+                                </div>
+                            </div>
 
-                {% if acclaim_count < 3 %}
-                    <div class="col-md-7 col-md-offset-1">
-                {% else %}
-                    <div class="col-md-7 col-md-offset-5">
-                {% endif %}
-                    <p class="acclaim-snippet">{{ acclaim.snippet | truncatewords:30 }}</p>
-                    <a target="_blank" href="{{ acclaim.acclaim-link }}" class="acclaim-link">-{{ acclaim.reviewer }}</a>
+                        </div>
+                    {% endif %}
+
+                    {% if acclaim_count < 3 %}
+                        <div class="col-md-7 col-md-offset-1 clearfix">
+                    {% else %}
+                        <div class="col-md-7 col-md-offset-5 clearfix">
+                    {% endif %}
+                        <p class="acclaim-snippet">{{ acclaim.snippet | truncatewords:30 }}</p>
+                        <a target="_blank" href="{{ acclaim.acclaim-link }}" class="pull-right acclaim-link">-{{ acclaim.reviewer }}</a>
+                    </div>
+                    {% assign acclaim_count = acclaim_count | plus:1 %}
+                {% endfor %}
                 </div>
-                {% assign acclaim_count = acclaim_count | plus:1 %}
-            {% endfor %}
-            </div>
+            </article>
         {% endfor %}
     </section>
 

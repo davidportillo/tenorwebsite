@@ -26,7 +26,6 @@ permalink: /calendar/
                     <h4 class="calendar-page-event-role">{{ event.role }}</h4>
                 </div>
                 <div class="col-md-2">
-                {% comment %}TODO: Add Logic for Recitals{% endcomment %}
                     <h6 class="calendar-page-event-house">{{ event.opera-house }}</h6>
                     <h6 class="calendar-page-event-location">{{ event.location-city }}, {{ event.location-state }}</h6>
                     {% assign current_time = site.time | date: "%s" %}
