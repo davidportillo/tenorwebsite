@@ -242,6 +242,18 @@ h2, .section-h2 {
 .media-header-image {
 	background-image: url('../images/media-header-bg.png');
 }
+.media {
+	.role-thumb {
+		margin-bottom: 30px;
+	}
+	.image-title {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 29px;
+	}
+}
 // BIOGRAPHY
 .bio-top {
 	.bio-name {
