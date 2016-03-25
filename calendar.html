@@ -29,7 +29,7 @@ permalink: /calendar/
                     <h6 class="calendar-page-event-house">{{ event.opera-house }}</h6>
                     <h6 class="calendar-page-event-location">{{ event.location-city }}, {{ event.location-state }}</h6>
                     {% assign current_time = site.time | date: "%s" %}
-                    {% assign upcoming_event = event.date-start | date: '%s' %}
+                    {% assign upcoming_event = event.date-end | date: '%s' %}
                     {% if event.ticket-link and upcoming_event >= current_time %}
                         <a href="{{ event.ticket-link }}" target="_blank" class="btn btn-block btn-default calendar-btn">Tickets</a>
                     {% endif %}
