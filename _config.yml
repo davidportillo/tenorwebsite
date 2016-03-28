@@ -10,7 +10,7 @@ title: David Portillo
 email: portillo.david1@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   David Portillo tenor, singer, artist specializing in the Opera.
-baseurl: "tenorwebsite" # the subpath of your site, e.g. /blog
+baseurl: "/tenorwebsite" # the subpath of your site, e.g. /blog
 url: "http://www.davidportillotenor.com/" # the base hostname & protocol for your site
 future: true #allow future posts to show
 # URIs and links
