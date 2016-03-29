@@ -16,7 +16,7 @@
               <h4 class="text-center calendar-h4">{{ calendar.title }}</h4>
             </div>
             <div class="col-md-2 col-md-offset-1">
-              <a href="{{ calendar.ticket-link }}" class="btn btn-block btn-default">Tickets</a>
+              <a target="_blank" href="{{ calendar.ticket-link }}" class="btn btn-block btn-default">Tickets</a>
             </div>
             {% assign event_count = event_count | plus:1 %}
           </div>
