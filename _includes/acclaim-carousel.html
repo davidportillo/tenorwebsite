@@ -14,7 +14,10 @@
                 <div class="item active">
                   <div class="carousel-content">
                     <a target="_blank" href="{{ acclaim.acclaim-link }}">
-                      <p>{{ acclaim.snippet | truncatewords:30 }}<br><span>- {{ acclaim.reviewer }}</span></p>
+                      <p>
+                        {{ acclaim.snippet | truncatewords:20 }}<br>
+                        <span>- {{ acclaim.reviewer }}</span>
+                      </p>
                     </a>
                   </div>
                 </div>
@@ -22,7 +25,10 @@
                 <div class="item">
                   <div class="carousel-content">
                     <a target="_blank" href="{{ acclaim.acclaim-link }}">
-                      <p>{{ acclaim.snippet | truncatewords:30 }}<br><span>- {{ acclaim.reviewer }}</span></p>
+                      <p>
+                        {{ acclaim.snippet | truncatewords:20 }}<br>
+                        <span>- {{ acclaim.reviewer }}</span>
+                      </p>
                     </a>
                   </div>
                 </div>

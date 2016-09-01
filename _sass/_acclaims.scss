@@ -1,0 +1,39 @@
+//Acclaims
+.acclaims-header-image {
+	background-image: url('../images/acclaim-header-bg.png');
+}
+.publication {
+	margin-bottom: 48px;
+	.acclaim-snippet {
+		color: $grey-text-color;
+		font-family: $serif;
+		font-weight: 300;
+		font-style: italic;
+	}
+	.acclaim-link {
+	    margin-bottom: 10px;
+	}
+	.acclaim-img {
+		background-repeat: no-repeat;
+	    background-size: contain;
+	    background-position: center;
+	    min-height: 240px;
+	    width: 354px;
+	    position: relative;
+	    margin-bottom: 24px;
+	    .role-bg {
+	    	position: absolute;
+	    	bottom: 0;
+	    	background: rgba(black, 0.8);
+	    	width: 100%;
+    		color: $beige-color;
+    		.role-title {
+				font-family: $serif;
+				font-size: 30px;
+				font-weight: 300;
+				font-style: italic;
+				line-height: 34px;
+    		}
+	    }
+	}
+}
