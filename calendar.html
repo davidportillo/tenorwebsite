@@ -17,13 +17,19 @@ permalink: /calendar/
         {% for event in year.items %}
             <div class="row">
                 <div class="col-md-2 col-md-offset-2">
-                    <h4 class="calendar-page-date">{{ event.date-all }}</h4>
-                    <hr class="calendar-page-date-hr">
-                    <h5 class="calendar-page-state">{{ event.location-state }}</h5>
+                    <h4 class="calendar-page-date">{{ event.date-all | date:'%B' }}</h4>
+                    <!--<hr class="calendar-page-date-hr">-->
+                    <!--<h5 class="calendar-page-state">{{ event.location-state }}</h5>-->
                 </div>
                 <div class="text-center col-md-4">
                     <h2 class="calendar-page-event-name">{{ event.title }}</h2>
-                    <h4 class="calendar-page-event-role">{{ event.role }}</h4>
+                    <h4 class="calendar-page-event-role">
+                        {% if event.role %}
+                            as {{ event.role }}
+                        {% else %}
+                            as soloist
+                        {% endif %}
+                    </h4>
                 </div>
                 <div class="col-md-2">
                     <h6 class="calendar-page-event-house">{{ event.opera-house }}</h6>
