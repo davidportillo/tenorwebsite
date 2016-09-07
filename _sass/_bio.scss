@@ -1,0 +1,60 @@
+// BIOGRAPHY
+.bio-top {
+	.bio-name {
+		color: $light-grey-color;
+		font-family: $sans;
+		line-height: 64px;
+		font-size: 42px;
+		font-weight: 300;
+		margin-top: 94px;
+		text-transform: capitalize;
+	}
+	.bio-hr {
+		width: 87px;
+		border: 1px solid $orange-color;
+	    margin-top: -48px;
+    	margin-bottom: -18px;
+	}
+	.bio-role {
+		color: $light-grey-color;
+		font-family: $sans;
+		line-height: 64px;
+		font-size: 36px;
+		font-weight: 600;
+		font-style: italic;
+	}
+	.bio-social {
+		padding-left: 0;
+		margin-bottom: 40px;
+		li {
+			display: inline;
+		}
+		.social-link {
+			color: $dark-blue-color;
+			padding-left: 30px;
+		    padding-right: 30px;
+    		font-size: 46px;
+			font-weight: 400;
+			line-height: 28px;
+		    &:hover {
+		    	color: $orange-color;
+		    }
+		}
+	}
+}
+.bio-bottom {
+	.bio-h2 {
+		margin-top: 48px;
+		line-height: 29px;
+		font-size: 32px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	.bio-p {
+		color: $default-text-color;
+		font-family: $sans;
+		font-size: 16px;
+		line-height: 29px;
+		font-weight: 300;
+	}
+}

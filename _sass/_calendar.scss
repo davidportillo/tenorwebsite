@@ -1,0 +1,98 @@
+.calendar {
+	.calendar-row {
+		margin-bottom: 24px;
+	}
+	.calendar-date {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 28px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-top: 0;
+	}
+	.calendar-state {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 19px;
+		font-weight: 700;
+	}
+	.calendar-hr {
+		margin-top: -4px;
+    	margin-bottom: -4px;
+		width: 39px;
+		background-color: $orange-color;
+		border: 1px solid $orange-color;
+	}
+	.calendar-h4{
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 32px;
+		font-weight: 600;
+		font-style: italic;
+		text-transform: uppercase;
+		margin-top: 0;
+	}
+}
+
+//Calendar
+.calendar-header-image {
+	background-image: url('../images/calendar-bg.png');
+}
+.calendar-page {
+	.calendar-page-h2-year {
+		color: $dark-blue-color;
+		font-family: $light;
+		font-size: 48px;
+		line-height: 60px;
+		text-transform: uppercase;
+	}
+	.calendar-page-date {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 22px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-top: 5px;
+	}
+	.calendar-page-date-hr {
+		width: 39px;
+		background-color: $orange-color;
+		border: 1px solid $orange-color;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 16px;
+	}
+	.calendar-page-state {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 20px;
+		font-weight: 700;
+	}
+	.calendar-page-event-name {
+		color: $dark-blue-color;
+		text-transform: uppercase;
+		font-family: $sans;
+		font-size: 28px;
+		font-weight: 600;
+		font-style: italic;
+		margin-top: 0;
+		line-height: 36px;
+	}
+	.calendar-page-event-role {
+		color: $dark-blue-color;
+		text-transform: capitilize;
+		font-family: $serif;
+		font-size: 18px;
+		font-weight: 200;
+		margin-top: -40px;
+	}
+	.calendar-page-event-house, .calendar-page-event-location {
+		color: $dark-blue-color;
+		font-family: $sans;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.calendar-btn {
+		padding: 10px 12px;
+	}
+}

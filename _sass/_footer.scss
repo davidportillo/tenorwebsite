@@ -1,0 +1,56 @@
+//SUBFOOTER
+.subfooter {
+	@extend .bg-img;
+	background-image: url('../images/subfooter-bg.png');
+	height: 500px;
+	text-align: center;
+    color: white;
+    padding-top: 220px;
+    margin-top: 96px;
+    .subfooter-h1 {
+    	font-size: 48px;
+		font-weight: 300;
+		font-style: italic;
+    }
+    .subfooter-h4 {
+    	font-family: $sans;
+		font-size: 32px;
+		font-weight: 300;
+    }
+}
+.site-footer {
+	background-color: $dark-grey-color;
+	min-height: 480px;
+	padding-top: 64px;
+	color: $grey-color;
+
+	.site-footer-h4	{
+		font-size: 19px;
+		font-weight: 400;
+		line-height: 28px;
+		font-family: $sans;
+	}
+	.site-footer-p {
+		line-height: 16px;
+		a {
+			color: $grey-color;
+			&:hover {
+				color: $orange-color;
+			}
+		}
+	}
+	.site-footer-social {
+		padding-left: 0;
+		li {
+			display: inline;
+		}
+		.social-link {
+			color: #fff;
+		    font-size: 36px;
+		    padding-right: 10px;
+		    &:hover {
+		    	color: $orange-color;
+		    }
+		}
+	}
+}
