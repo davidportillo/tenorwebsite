@@ -32,6 +32,21 @@ tonio-pics:
   - url: "/images/media/tonio-4.jpg"
   - url: "/images/media/tonio-5.jpg"
   - url: "/images/media/tonio-6.jpg"
+ferrando-pics:
+  - url: "/images/media/ferrando-2.jpg"
+  - url: "/images/media/ferrando-3.jpg"
+  - url: "/images/media/ferrando-4.jpg"
+  - url: "/images/media/ferrando-5.jpg"
+  - url: "/images/media/ferrando-6.jpg"
+  - url: "/images/media/ferrando-7.jpg"
+  - url: "/images/media/ferrando-8.jpg"
+ernesto-pics:
+  - url: "/images/media/ernesto-2.jpg"
+  - url: "/images/media/ernesto-3.jpg"
+  - url: "/images/media/ernesto-4.jpg"
+  - url: "/images/media/ernesto-5.jpg"
+  - url: "/images/media/ernesto-6.jpg"
+
 ---
 <div class="header-image media-header-image">
     <h1 class="text-center header-h1">{{ page.title }}</h1>
@@ -151,6 +166,9 @@ tonio-pics:
                 <a href="{{ site.baseurl }}/images/media/ferrando-1.jpg" data-lightbox="ferrando" data-title="Cosi fan Tutte - Opera Theatre of Saint Louis">
                     <img src="{{ site.baseurl }}/images/ferrando-thumb.png" alt="" class="center-block img-responsive img-rounded pic-grid">
                 </a>
+                {% for pic in page.ferrando-pics %}
+                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="ferrando" data-title="Cosi fan Tutte - Opera Theatre of Saint Louis"></a>
+                {% endfor %}
                 <h4 class="text-center image-title">Ferrando - Cosi fan Tutte</h4>
             </div>
             <div class="col-md-4 role-thumb">
@@ -172,6 +190,17 @@ tonio-pics:
                     <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="tonio" data-title="La Fille du Regiment - Fort Worth Opera"></a>
                 {% endfor %}
                 <h4 class="text-center image-title">Tonio - La Fille du Regiment</h4>
+            </div>
+            <div class="col-md-4 role-thumb">
+                <a href="{{ site.baseurl }}/images/media/ernesto-1.jpg" data-lightbox="ernesto" data-title="Ernesto in Don Pasquale at Palm Beach Opera
+Photo by Madeline Gray">
+                    <img src="{{ site.baseurl }}/images/ernesto-thumb.png" alt="" class="center-block img-responsive img-rounded pic-grid">
+                </a>
+                {% for pic in page.ernesto-pics %}
+                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="ernesto" data-title="Ernesto in Don Pasquale at Palm Beach Opera
+Photo by Madeline Gray"></a>
+                {% endfor %}
+                <h4 class="text-center image-title">Ernesto - Don Pasquale</h4>
             </div>
         </div> <!--3rd row -->
     </div><!-- container -->
