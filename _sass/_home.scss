@@ -39,9 +39,18 @@
 		}
 	}
 }
- @media only screen and (min-width : 992px) {
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	#acclaims-carousel {
+		min-height: 500px;
+	}
+}
+@media only screen and (min-width : 992px) {
 	.carousel-caption h4 {
-    	font-size: 50px;
+		font-size: 50px;
 		margin-bottom: 70px;
+	}
+	#acclaims-carousel {
+		min-height: 260px;
 	}
 }
