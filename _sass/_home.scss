@@ -15,7 +15,7 @@
     background-color: $dark-grey-color;
     padding-top: 48px;
     padding-bottom: 48px;
-	min-height: 220px;
+	min-height: 260px;
 
     .carousel-content {
     	color:white;
@@ -37,5 +37,11 @@
 		    font-style: normal;
 		    font-size: 18px;
 		}
+	}
+}
+ @media only screen and (min-width : 992px) {
+	.carousel-caption h4 {
+    	font-size: 50px;
+		margin-bottom: 70px;
 	}
 }
