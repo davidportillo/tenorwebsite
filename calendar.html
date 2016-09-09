@@ -8,42 +8,48 @@ permalink: /calendar/
 </div>
 <div class="container calendar-page">
     {% assign events_by_year = site.categories['calendar'] | group_by:"date-year" %}
-    {% for year in events_by_year %}
+    {% for year in events_by_year reversed  %}
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center calendar-page-h2-year">{{year.name}}</h2>
+                {% if year.name > "2015" %}
+                <h2 class="text-center calendar-page-h2-year">{{ year.name }}</h2>
+                {% endif %}
             </div>
         </div>
-        {% for event in year.items %}
-            <div class="row">
-                <div class="col-md-2 col-md-offset-2">
-                    <h4 class="calendar-page-date">{{ event.date-all | date:'%B' }}</h4>
-                    <!--<hr class="calendar-page-date-hr">-->
-                    <!--<h5 class="calendar-page-state">{{ event.location-state }}</h5>-->
-                </div>
-                <div class="text-center col-md-4">
-                    <h2 class="calendar-page-event-name">{{ event.title }}</h2>
-                    <h4 class="calendar-page-event-role">
-                        {% if event.role %}
-                            as {{ event.role }}
-                        {% else %}
-                            as soloist
+        {% for event in year.items reversed %}
+            {% assign current_time = site.time | date: "%s" %}
+            {% assign upcoming_event = event.date-end | date: '%s' %}
+            {% if upcoming_event >= current_time %}
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-2">
+                        <h4 class="calendar-page-date">{{ event.date-all | date:'%B' }}</h4>
+                        <!--<hr class="calendar-page-date-hr">-->
+                        <!--<h5 class="calendar-page-state">{{ event.location-state }}</h5>-->
+                    </div>
+                    <div class="text-center col-md-4">
+                        <h2 class="calendar-page-event-name">{{ event.title }}</h2>
+                        <h4 class="calendar-page-event-role">
+                            {% if event.role %}
+                                as {{ event.role }}
+                            {% else %}
+                                as soloist
+                            {% endif %}
+                        </h4>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="calendar-page-event-house">{{ event.opera-house }}</h6>
+                        <h6 class="calendar-page-event-location">{{ event.location-city }}, {{ event.location-state }}</h6>
+
+                        {% if event.ticket-link and upcoming_event >= current_time %}
+                            <a href="{{ event.ticket-link }}" target="_blank" class="btn btn-block btn-default calendar-btn">Tickets</a>
                         {% endif %}
-                    </h4>
+
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <hr class="site-row">
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <h6 class="calendar-page-event-house">{{ event.opera-house }}</h6>
-                    <h6 class="calendar-page-event-location">{{ event.location-city }}, {{ event.location-state }}</h6>
-                    {% assign current_time = site.time | date: "%s" %}
-                    {% assign upcoming_event = event.date-end | date: '%s' %}
-                    {% if event.ticket-link and upcoming_event >= current_time %}
-                        <a href="{{ event.ticket-link }}" target="_blank" class="btn btn-block btn-default calendar-btn">Tickets</a>
-                    {% endif %}
-                </div>
-                <div class="col-md-8 col-md-offset-2">
-                    <hr class="site-row">
-                </div>
-            </div>
+            {% endif %}
         {% endfor %}
     {% endfor %}
 </div>
