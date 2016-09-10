@@ -97,3 +97,31 @@ permalink: /calendar/
     {% endfor %}
 
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+
+    var count = 0;
+
+
+    $(".calendar-page-event-name:contains(Ariodante)")
+    .parents(".row")
+    .hide()
+    .last()
+    .show();
+
+    $(".calendar-page-event-location:contains(London, UK)")
+    .next()
+    .click(function(event) {
+            if (count < 1) {
+                event.preventDefault();
+                $(".calendar-page-event-name:contains(Ariodante)")
+                .parents(".row")
+                .fadeIn( 400 )
+                .show();
+                count = count + 1;
+            }
+    	});
+  });
+
+</script>
