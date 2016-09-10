@@ -103,7 +103,6 @@ permalink: /calendar/
 
     var count = 0;
 
-
     $(".calendar-page-event-name:contains(Ariodante)")
     .parents(".row")
     .hide()
@@ -113,15 +112,15 @@ permalink: /calendar/
     $(".calendar-page-event-location:contains(London, UK)")
     .next()
     .click(function(event) {
-            if (count < 1) {
-                event.preventDefault();
-                $(".calendar-page-event-name:contains(Ariodante)")
-                .parents(".row")
-                .fadeIn( 400 )
-                .show();
-                count = count + 1;
-            }
-    	});
+        if (count < 1) {
+            event.preventDefault();
+            $(".calendar-page-event-name:contains(Ariodante)")
+            .parents(".row")
+            .fadeIn( 400 )
+            .show();
+            count = count + 1;
+        }
+    });
   });
 
 </script>
