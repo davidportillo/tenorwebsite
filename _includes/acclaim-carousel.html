@@ -4,12 +4,13 @@
         <li data-target="#acclaims-carousel" data-slide-to="0" class="active"></li>
         <li data-target="#acclaims-carousel" data-slide-to="1"></li>
         <li data-target="#acclaims-carousel" data-slide-to="2"></li>
+        <li data-target="#acclaims-carousel" data-slide-to="3"></li>
       </ol>
       <!-- Wrapper for slides -->
       <div class="row">
         <div class="col-xs-offset-3 col-xs-6">
           <div class="carousel-inner" role="listbox">
-            {% for acclaim in featured-acclaims limit:3 %}
+            {% for acclaim in featured-acclaims limit:4 %}
               {% if forloop.first == true %}
                 <div class="item active">
                   <div class="carousel-content">
