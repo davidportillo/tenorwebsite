@@ -46,7 +46,9 @@ ernesto-pics:
   - url: "/images/media/ernesto-4.jpg"
   - url: "/images/media/ernesto-5.jpg"
   - url: "/images/media/ernesto-6.jpg"
-
+portillo-pics:
+  - url: "/images/media/david_portillo-2.jpg"
+  - url: "/images/media/david_portillo-3.jpg"
 ---
 <div class="header-image media-header-image">
     <h1 class="text-center header-h1">{{ page.title }}</h1>
@@ -169,11 +171,11 @@ Photo by Dan Rest"></a>
                 <h4 class="text-center image-title">Count Almaviva - Barber of Seville</h4>
             </div>
             <div class="col-md-4 role-thumb">
-                <a href="{{ site.baseurl }}/images/media/ferrando-1.jpg" data-lightbox="ferrando" data-title="Ferrando in Cosi fan Tutte at Opera Photo by Prudence Upton">
+                <a href="{{ site.baseurl }}/images/media/ferrando-1.jpg" data-lightbox="ferrando" data-title="Ferrando in Cosi fan Tutte at Opera Theatre of Saint Louis">
                     <img src="{{ site.baseurl }}/images/ferrando-thumb.png" alt="" class="center-block img-responsive img-rounded pic-grid">
                 </a>
                 {% for pic in page.ferrando-pics %}
-                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="ferrando" data-title="Ferrando in Cosi fan Tutte at Opera Photo by Prudence Upton"></a>
+                        <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="ferrando" data-title="Ferrando in Cosi fan Tutte at Opera Australia Photo by Prudence Upton"></a>
                 {% endfor %}
                 <h4 class="text-center image-title">Ferrando - Cosi fan Tutte</h4>
             </div>
@@ -209,6 +211,15 @@ Photo by Madeline Gray">
 Photo by Madeline Gray"></a>
                 {% endfor %}
                 <h4 class="text-center image-title">Ernesto - Don Pasquale</h4>
+            </div>
+            <div class="col-md-4 role-thumb">
+                <a href="{{ site.baseurl }}/images/media/david_portillo-1.jpg" data-lightbox="portillo" data-title="David Portillo Headshots Photo by Kristen Hoebermann">
+                    <img src="{{ site.baseurl }}/images/david_portillo.png" alt="" class="center-block img-responsive img-rounded pic-grid">
+                </a>
+                {% for pic in page.portillo-pics %}
+                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="portillo" data-title="David Portillo Headshots Photo by Kristen Hoebermann"></a>
+                {% endfor %}
+                <h4 class="text-center image-title">David Portillo - Headshots</h4>
             </div>
         </div> <!--3rd row -->
     </div><!-- container -->
