@@ -18,8 +18,11 @@ ottavio-pics:
   - url: "/images/media/don_ottavio-2.jpg"
   - url: "/images/media/don_ottavio-3.jpg"
 david-pics:
+  - url: "/images/media/david-6.jpg"
+  - url: "/images/media/david-1.jpg"
   - url: "/images/media/david-2.jpg"
   - url: "/images/media/david-3.jpg"
+  - url: "/images/media/david-4.jpg"
 almaviva-pics:
   - url: "/images/media/count-almaviva-2.jpg"
 ramiro-pics:
@@ -149,13 +152,14 @@ Photo by: Kelly and Massa"></a>
                 <h4 class="text-center image-title">Don Ottavio - Don Giovanni </h4>
             </div>
             <div class="col-md-4 role-thumb">
-                <a href="{{ site.baseurl }}/images/media/david-1.jpg" data-lightbox="david" data-title="David in Die Meistersinger von Nurnberg at Lyric Opera of Chicago
-Photo by Dan Rest">
+                <a href="{{ site.baseurl }}/images/media/david-5.jpg" data-lightbox="david" data-title="David in Die Meistersinger von Nürnberg at Glyndebourne Opera Photo by Tristram Kenton">
                     <img src="{{ site.baseurl }}/images/david_pic_grid.png" alt="" class="center-block img-responsive img-rounded pic-grid">
                 </a>
                 {% for pic in page.david-pics %}
-                   <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="david" data-title="David in Die Meistersinger von Nurnberg at Lyric Opera of Chicago
-Photo by Dan Rest"></a>
+                    {% if forloop.first == true %}
+                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="david" data-title="David in Die Meistersinger von Nürnberg at Glyndebourne Opera Photo by Tristram Kenton"></a>             {% else %}
+                        <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="david" data-title="David in Die Meistersinger von Nurnberg at Lyric Opera of Chicago Photo by Dan Rest"></a>
+                    {% endif %}
                 {% endfor %}
                 <h4 class="text-center image-title">David - Die Meistersinger</h4>
             </div>
