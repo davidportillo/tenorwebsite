@@ -46,7 +46,9 @@ ernesto-pics:
   - url: "/images/media/ernesto-4.jpg"
   - url: "/images/media/ernesto-5.jpg"
   - url: "/images/media/ernesto-6.jpg"
-
+portillo-pics:
+  - url: "/images/media/david_portillo-2.jpg"
+  - url: "/images/media/david_portillo-3.jpg"
 ---
 <div class="header-image media-header-image">
     <h1 class="text-center header-h1">{{ page.title }}</h1>
@@ -209,6 +211,15 @@ Photo by Madeline Gray">
 Photo by Madeline Gray"></a>
                 {% endfor %}
                 <h4 class="text-center image-title">Ernesto - Don Pasquale</h4>
+            </div>
+            <div class="col-md-4 role-thumb">
+                <a href="{{ site.baseurl }}/images/media/david_portillo-1.jpg" data-lightbox="portillo" data-title="David Portillo Headshots Photo by Kristen Hoebermann">
+                    <img src="{{ site.baseurl }}/images/david_portillo.png" alt="" class="center-block img-responsive img-rounded pic-grid">
+                </a>
+                {% for pic in page.portillo-pics %}
+                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="portillo" data-title="David Portillo Headshots Photo by Kristen Hoebermann"></a>
+                {% endfor %}
+                <h4 class="text-center image-title">David Portillo - Headshots</h4>
             </div>
         </div> <!--3rd row -->
     </div><!-- container -->
