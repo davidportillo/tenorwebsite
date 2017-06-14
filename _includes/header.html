@@ -7,14 +7,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">
-        <img class="logo" alt="Brand" src="/images/logo.svg" width="200">
+      <a class="navbar-brand" href="{{ site.baseurl }}/">
+        <img class="brand" alt="Brand" src="{{"/images/logo.svg" | prepend:site.baseurl }}" width="340">
       </a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         {% for link in site.links %}
-          <li><a href=" {{ link.url }} ">{{ link.title }}</a></li>
+          <li><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}
       </ul>
     </div>

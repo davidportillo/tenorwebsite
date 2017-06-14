@@ -14,7 +14,7 @@ permalink: /acclaims/
                 <article class="publication">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="{{ pub.img }}" alt="" class="center-block img-responsive acclaim-img">
+                            <img src="{{ site.baseurl }}{{ pub.img }}" alt="" class="center-block img-responsive acclaim-img">
                         </div>
                         <div class="col-md-7 col-md-offset-1 clearfix">
                             <p class="acclaim-snippet">{{ pub.snippet }}</p>
@@ -37,7 +37,7 @@ permalink: /acclaims/
                 {% for acclaim in acclaim_roles.items %}
                     {% if forloop.first == true %}
                         <div class="col-md-4">
-                            <div class="center-block acclaim-img" style="background-image: url('{{ acclaim.img  }}');">
+                            <div class="center-block acclaim-img" style="background-image: url('{{ site.baseurl }}{{ acclaim.img  }}');">
                                 <div class="role-bg">
                                     <h4 class="text-center role-title">{{ acclaim.role }}</h4>
                                 </div>

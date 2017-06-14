@@ -1,31 +1,37 @@
 <div class="subfooter">
 	<div class="container">
-		<h1 class="subfooter-h1">Living the dream, baby</h1>
-		<h4 class="subfooter-h4">one day at a time</h4>
+		<h1 class="subfooter-h1">Where words fail, music speaks.</h1>
+		<h4 class="subfooter-h4">- Hans Christian Andersen</h4>
 	</div>
 </div>
 
 <footer class="site-footer">
 	<div class="container">
 		<div class="col-md-4">
-			<h4 class="site-footer-h4">@2016 David Portillo Tenor</h4>
+			<h4 class="site-footer-h4">@2017 David Portillo Tenor</h4>
 			<p class="site-footer-p">All Rights Reserved</p>
-			<p class="site-footer-p">Website by Pigeontec</p>
+			<p class="site-footer-p">Website by <a href="http://pigeontec.com">Pigeontec</a></p>
 		</div>
 		<div class="col-md-4">
 			<h4 class="site-footer-h4">Address</h4>
-			<address class="site-footer-address">
-				Img Artist <br>
+			<address class="site-footer-address site-footer-p">
+				<a href="http://imgartists.com/artist/david_portillo">IMG Artists, Worldwide Representation</a> <br>
 				7 West 54th Street <br>
 				New York, NY 10019 <br>
-				USA
+				USA <br> <br>
+				Contact <br>
+				<a href="mailto:ssnook@imgartists.com">Sam Snook, General Management</a> <br>
+				<a href="mailto:dkimball@imgartists.com">Danielle Kimball, Managerial Assistant</a>
 			</address>
-			<address class="site-footer-address">
-				Harrison Parrot Artist <br>
-				and Project Management <br>
+
+			<address class="site-footer-address site-footer-p">
+				<a href="http://www.harrisonparrott.com/artist/profile/david-portillo">Harrison Parrott, European Representation</a> <br>
 				5-6 Albion Court <br>
 				Albion Place <br>
-				London W6 OQT
+				London W6 OQT <br> <br>
+				Contact <br>
+				<a href="mailto:ian.stones@harrisonparrott.co.uk">Ian Stones, General Management</a> <br>
+				<a href="mailto:georgina.wheatley@harrisonparrott.co.uk">Georgina Wheatley, Managerial Assistant</a>
 			</address>
 		</div>
 		<div class="col-md-4">
@@ -42,10 +48,10 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/javascripts/bootstrap.min.js"></script>
-<script src="/javascripts/lightbox.min.js"></script>
+<script src="{{"/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
+<script src="{{"/javascripts/lightbox.min.js" | prepend:site.baseurl }}"></script>
 <script>
- setCarouselHeight('#acclaims-carousel');
+//  setCarouselHeight('#acclaims-carousel');
 
     function setCarouselHeight(id)
     {
@@ -65,4 +71,15 @@
             $(this).css('height',max+'px');
         });
     }
+</script>
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53325305-2', 'auto');
+  ga('send', 'pageview');
+
 </script>
