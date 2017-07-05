@@ -1,10 +1,13 @@
-#David Portillo-tenor
+# David Portillo-tenor
 ## Description
 David Portillo tenor's website built with Jekyll.
 
 ## Docs
 Jekyll docs are found here - http://jekyllrb.com/docs/installation/ <br>
 Twitter Bootstrap docs here - https://github.com/twbs/bootstrap-sass
+
+### View Staging
+[http://davidportillo.github.io/tenorwebsite/](http://davidportillo.github.io/tenorwebsite/)
 
 ### View Live
 [http://www.davidportillotenor.com/](http://www.davidportillotenor.com/)
