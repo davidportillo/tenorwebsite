@@ -4,6 +4,17 @@
 
 David Portillo tenor's website built with Jekyll.
 
+## Image Dimensions
+
+| Media        | Dimensions |
+| ------------- |:-------------:|
+| carousel      | 1440 x 600 |
+| footer        | 1436 x 500 |
+| bio | 687 x 552      |
+| header | 1440 x 380  |
+| media | 1440 x auto  |
+
+
 ## Docs
 
 Jekyll docs are found here - http://jekyllrb.com/docs/installation/
