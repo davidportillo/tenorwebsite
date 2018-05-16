@@ -72,8 +72,11 @@ ernesto-pics:
   - url: "/images/media/ernesto-5.jpg"
   - url: "/images/media/ernesto-6.jpg"
 portillo-pics:
-  - url: "/images/media/david_portillo-2.jpg"
-  - url: "/images/media/david_portillo-3.jpg"
+  - url: "/images/media/headshot2.png"
+  - url: "/images/media/headshot3.png"
+  - url: "/images/media/headshot4.png"
+  - url: "/images/media/headshot5.png"
+  - url: "/images/media/headshot6.png"
 ---
 <div class="header-image media-header-image">
     <h1 class="text-center header-h1">{{ page.title }}</h1>
@@ -179,7 +182,8 @@ Photo by: Kelly and Massa"></a>
                 </a>
                 {% for pic in page.david-pics %}
                     {% if forloop.first == true %}
-                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="david" data-title="David in Die Meistersinger von Nürnberg at Glyndebourne Opera Photo by Tristram Kenton"></a>             {% else %}
+                      <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="david" data-title="David in Die Meistersinger von Nürnberg at Glyndebourne Opera Photo by Tristram Kenton"></a>
+                    {% else %}
                         <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="david" data-title="David in Die Meistersinger von Nurnberg at Lyric Opera of Chicago Photo by Dan Rest"></a>
                     {% endif %}
                 {% endfor %}
@@ -235,11 +239,15 @@ Photo by Madeline Gray"></a>
                 <h4 class="text-center image-title">Ernesto - Don Pasquale</h4>
             </div>
             <div class="col-md-4 role-thumb">
-                <a href="{{ site.baseurl }}/images/media/david_portillo-1.jpg" data-lightbox="portillo" data-title="David Portillo Headshots Photo by Kristen Hoebermann">
-                    <img src="{{ site.baseurl }}/images/david_portillo.png" alt="" class="center-block img-responsive img-rounded pic-grid">
+                <a href="{{ site.baseurl }}/images/media/headshot1.png" data-lightbox="portillo" data-title="Headshot, Arielle Doneson">
+                    <img src="{{ site.baseurl }}/images/portillo-thumb.png" alt="" class="center-block img-responsive img-rounded pic-grid">
                 </a>
                 {% for pic in page.portillo-pics %}
-                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="portillo" data-title="David Portillo Headshots Photo by Kristen Hoebermann"></a>
+                  {% if forloop.first == true %}
+                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="portillo" data-title="Headshot, Arielle Doneson"></a>
+                  {% else %}
+                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="portillo" data-title="Headshot, Simon Pauly"></a>
+                  {% endif %}
                 {% endfor %}
                 <h4 class="text-center image-title">David Portillo - Headshots</h4>
             </div>
