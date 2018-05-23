@@ -77,7 +77,20 @@ portillo-pics:
   - url: "/images/media/headshot4.png"
   - url: "/images/media/headshot5.png"
   - url: "/images/media/headshot6.png"
+camille-pics:
+  - url: "/images/media/camille-2.jpg"
+don_ottavio-dallas-pics:
+  - url: "/images/media/don_ottavio-dallas-2.jpg"
+  - url: "/images/media/don_ottavio-dallas-3.jpg"
+  - url: "/images/media/don_ottavio-dallas-4.jpg"
+hgo-barber-pics:
+  - url: "/images/media/hgo-barber-2.jpg"
+  - url: "/images/media/hgo-barber-3.jpg"
+  - url: "/images/media/hgo-barber-4.jpg"
+eduardo-pics:
+  - url: "/images/media/eduardo.jpg"
 ---
+
 <div class="header-image media-header-image">
     <h1 class="text-center header-h1">{{ page.title }}</h1>
 </div>
@@ -154,6 +167,46 @@ portillo-pics:
             <div class="col-md-12 role-thumb">
                 <img src="{{ site.baseurl }}/images/featured.jpg" alt="" class="center-block img-responsive img-rounded featured-image">
             </div>
+
+
+            <div class="col-md-4 role-thumb">
+              <a href="{{ site.baseurl }}/images/media/eduardo.jpg" data-lightbox="eduardo" data-title="c/o The Metropolitan Opera (Ken Howard), The Exterminating Angel">
+                <img src="{{ site.baseurl }}/images/eduardo-thumb.jpg" alt="eduardo" class="center-block img-responsive img-rounded pic-grid">
+              </a>
+              <h4 class="text-center image-title">Eduardo - The Exterminating Angel</h4>
+            </div>
+
+
+            <div class="col-md-4 role-thumb">
+              <a href="{{ site.baseurl }}/images/media/don_ottavio-dallas-1.jpg" data-lightbox="don-ottavio-dallas" data-title="c/o The Dallas Opera (Karen Almond), Don Giovanni">
+                <img src="{{ site.baseurl }}/images/don_ottavio-dallas-thumb.jpg" alt="don ottavio dallas" class="center-block img-responsive img-rounded pic-grid">
+              </a>
+              {% for pic in page.don_ottavio-dallas-pics %}
+              <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="don-ottavio-dallas" data-title="c/o The Dallas Opera (Karen Almond), Don Giovanni"></a>
+              {% endfor %}
+              <h4 class="text-center image-title">Don Ottavio - Don Giovanni</h4>
+            </div>
+
+            <div class="col-md-4 role-thumb">
+              <a href="{{ site.baseurl }}/images/media/hgo-barber-1.jpg" data-lightbox="hgo-barber" data-title="c/o Houston Grand Opera, The Barber of Seville">
+                <img src="{{ site.baseurl }}/images/hgo-barber-thumb.jpg" alt="hgo-barber" class="center-block img-responsive img-rounded pic-grid">
+              </a>
+              {% for pic in page.hgo-barber-pics %}
+              <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="hgo-barber" data-title="c/o Houston Grand Opera, The Barber of Seville"></a>
+              {% endfor %}
+              <h4 class="text-center image-title">Count Almaviva - Barber of Seville</h4>
+            </div>
+
+            <div class="col-md-4 role-thumb">
+              <a href="{{ site.baseurl }}/images/media/camille-1.jpg" data-lightbox="camille" data-title="c/o The Metropolitan Opera (Marty Sohl), The Merry Widow">
+                <img src="{{ site.baseurl }}/images/camille-thumb.jpg" alt="camille" class="center-block img-responsive img-rounded pic-grid">
+              </a>
+              {% for pic in page.camille-pics %}
+              <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="camille" data-title="c/o The Metropolitan Opera (Marty Sohl), The Merry Widow"></a>
+              {% endfor %}
+              <h4 class="text-center image-title">Camille De Rosillon - The Merry Widow</h4>
+            </div>
+
             <div class="col-md-4 role-thumb">
                 <a href="{{ site.baseurl }}/images/media/tamino-1.jpg" data-lightbox="tamino" data-title="Tamino in The Magic Flute at Houston Grand Opera
 Photo by: Lynn Lane">
@@ -238,19 +291,7 @@ Photo by Madeline Gray"></a>
                 {% endfor %}
                 <h4 class="text-center image-title">Ernesto - Don Pasquale</h4>
             </div>
-            <div class="col-md-4 role-thumb">
-                <a href="{{ site.baseurl }}/images/media/headshot1.png" data-lightbox="portillo" data-title="Headshot, Arielle Doneson">
-                    <img src="{{ site.baseurl }}/images/portillo-thumb.png" alt="" class="center-block img-responsive img-rounded pic-grid">
-                </a>
-                {% for pic in page.portillo-pics %}
-                  {% if forloop.first == true %}
-                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="portillo" data-title="Headshot, Arielle Doneson"></a>
-                  {% else %}
-                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="portillo" data-title="Headshot, Simon Pauly"></a>
-                  {% endif %}
-                {% endfor %}
-                <h4 class="text-center image-title">David Portillo - Headshots</h4>
-            </div>
+
             <div class="col-md-4 role-thumb">
                 <a href="{{ site.baseurl }}/images/media/andres.jpg" data-lightbox="andres" data-title="Wozzeck - Andres - Chicago Lyric Opera ">
                     <img src="{{ site.baseurl }}/images/andres-thumb.png" alt="" class="center-block img-responsive img-rounded pic-grid">
@@ -290,5 +331,27 @@ Photo by Madeline Gray"></a>
                 {% endfor %}
                 <h4 class="text-center image-title">Pedrillo - Die Entführung aus dem Serail</h4>
             </div>
+
+            <div class="col-md-4 role-thumb">
+              <a href="{{ site.baseurl }}/images/media/tulsa.jpg" data-lightbox="concert-only" data-title="c/o Tulsa Opera, Gala Concert Evening">
+                <img src="{{ site.baseurl }}/images/concert-only-thumb.jpg" alt="concert-only" class="center-block img-responsive img-rounded pic-grid">
+              </a>
+              <h4 class="text-center image-title">Only Concert</h4>
+            </div>
+
+            <div class="col-md-4 role-thumb">
+                <a href="{{ site.baseurl }}/images/media/headshot1.png" data-lightbox="portillo" data-title="Headshot, Arielle Doneson">
+                    <img src="{{ site.baseurl }}/images/portillo-thumb.png" alt="" class="center-block img-responsive img-rounded pic-grid">
+                </a>
+                {% for pic in page.portillo-pics %}
+                  {% if forloop.first == true %}
+                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="portillo" data-title="Headshot, Arielle Doneson"></a>
+                  {% else %}
+                    <a href="{{ site.baseurl }}{{ pic.url }}" data-lightbox="portillo" data-title="Headshot, Simon Pauly"></a>
+                  {% endif %}
+                {% endfor %}
+                <h4 class="text-center image-title">David Portillo - Headshots</h4>
+            </div>
+
         </div><!--row-->
     </div><!-- container -->

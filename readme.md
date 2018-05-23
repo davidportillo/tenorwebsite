@@ -13,6 +13,7 @@ David Portillo tenor's website built with Jekyll.
 | bio | 687 x 552      |
 | header | 1440 x 380  |
 | media | 1440 x auto  |
+| media-thumbnail | 333 x 299 |
 
 
 ## Docs
