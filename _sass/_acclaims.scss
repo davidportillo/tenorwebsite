@@ -3,12 +3,15 @@
 	background-image: url('../images/acclaim-header-bg.png');
 }
 .publication {
-	margin-bottom: 48px;
+  margin-bottom: 48px;
+  .acclaim-link {
+    text-decoration: none;
+  }
 	.acclaim-snippet {
 		color: $grey-text-color;
 		font-family: $serif;
 		font-weight: 300;
-		font-style: italic;
+    font-style: italic;
 	}
 	.acclaim-link {
 	    margin-bottom: 10px;
@@ -35,5 +38,17 @@
 				line-height: 34px;
     		}
 	    }
-	}
+  }
+  .acclaim-card {
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    border: 5px solid rgba(0,0,0,0.03);
+    border-radius: 3px;
+    padding: 21px;
+    text-align: left;
+  }
+
+
+
 }

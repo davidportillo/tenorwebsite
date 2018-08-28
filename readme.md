@@ -20,6 +20,7 @@ David Portillo tenor's website built with Jekyll.
 | header          | 1440 x 380  |
 | media           | 1440 x auto |
 | media-thumbnail |  333 x 299  |
+| acclaim-thumbnail | 326 x 240 |
 
 ## Docs
 
