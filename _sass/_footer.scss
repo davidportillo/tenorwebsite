@@ -1,62 +1,77 @@
 //SUBFOOTER
 .subfooter {
-	@extend .bg-img;
-	background-image: url('../images/subfooter-bg2.png');
-	height: 500px;
-	text-align: center;
-    color: white;
-    padding-top: 220px;
-    margin-top: 96px;
-    .subfooter-h1 {
-    	font-size: 36px;
-		font-weight: 300;
-		font-style: italic;
-    }
-    .subfooter-h4 {
-    	font-family: $sans;
-		font-size: 32px;
-		font-weight: 300;
-    }
+  @extend .bg-img;
+  background-image: url("../images/subfooter-bg2.png");
+  height: 500px;
+  text-align: center;
+  color: white;
+  padding-top: 220px;
+  margin-top: 96px;
+  .subfooter-h1 {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .subfooter-h4 {
+    font-family: $sans;
+    font-size: 32px;
+    font-weight: 300;
+  }
 }
 .site-footer {
-	background-color: $dark-grey-color;
-	min-height: 640px;
-	padding-top: 64px;
-	color: $grey-color;
+  background-color: $dark-grey-color;
+  min-height: 640px;
+  padding-top: 64px;
+  color: $grey-color;
 
-	.site-footer-h4	{
-		font-size: 19px;
-		font-weight: 400;
-		line-height: 28px;
-		font-family: $sans;
-	}
-	.site-footer-p {
-		line-height: 16px;
-		a {
-			color: $grey-color;
-			&:hover {
-				color: $orange-color;
-			}
-		}
-	}
-	.site-footer-social {
-		padding-left: 0;
-		li {
-			display: inline;
-		}
-		.social-link {
-			color: #fff;
-		    font-size: 36px;
-		    padding-right: 10px;
-		    &:hover {
-		    	color: $orange-color;
-		    }
-		}
-	}
+  .site-footer-h4 {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 28px;
+    font-family: $sans;
+  }
+  .site-footer-p {
+    line-height: 16px;
+    a {
+      color: $grey-color;
+      &:hover {
+        color: $orange-color;
+      }
+    }
+  }
+  .site-footer-social {
+    padding-left: 0;
+    li {
+      display: inline;
+    }
+    .social-link {
+      color: #fff;
+      font-size: 36px;
+      padding-right: 10px;
+      &:hover {
+        color: $orange-color;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
-@media only screen and (min-width : 992px) {
-	.site-footer {
-		min-height: 480px;
-	}
+@media only screen and (min-width: 992px) {
+  .site-footer {
+    min-height: 480px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .subfooter {
+    height: 300px;
+    background-position: 65% 75%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    .subfooter-h1 {
+      font-size: 24px;
+    }
+  }
 }

@@ -1,54 +1,52 @@
 //Acclaims
 .acclaims-header-image {
-	background-image: url('../images/acclaim-header-bg.png');
+  background-image: url("../images/acclaim-header-bg.png");
+  background-position: 25% 75%;
 }
 .publication {
   margin-bottom: 48px;
   .acclaim-link {
     text-decoration: none;
   }
-	.acclaim-snippet {
-		color: $grey-text-color;
-		font-family: $serif;
-		font-weight: 300;
+  .acclaim-snippet {
+    color: $grey-text-color;
+    font-family: $serif;
+    font-weight: 300;
     font-style: italic;
-	}
-	.acclaim-link {
-	    margin-bottom: 10px;
-	}
-	.acclaim-img {
-		background-repeat: no-repeat;
-	    background-size: contain;
-	    background-position: center;
-	    min-height: 240px;
-	    width: 354px;
-	    position: relative;
-	    margin-bottom: 24px;
-	    .role-bg {
-	    	position: absolute;
-	    	bottom: 0;
-	    	background: rgba(black, 0.8);
-	    	width: 100%;
-    		color: $beige-color;
-    		.role-title {
-				font-family: $serif;
-				font-size: 30px;
-				font-weight: 300;
-				font-style: italic;
-				line-height: 34px;
-    		}
-	    }
+  }
+  .acclaim-link {
+    margin-bottom: 10px;
+  }
+  .acclaim-img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-height: 240px;
+    width: 354px;
+    position: relative;
+    margin-bottom: 24px;
+    .role-bg {
+      position: absolute;
+      bottom: 0;
+      background: rgba(black, 0.8);
+      width: 100%;
+      color: $beige-color;
+      .role-title {
+        font-family: $serif;
+        font-size: 30px;
+        font-weight: 300;
+        font-style: italic;
+        line-height: 34px;
+      }
+    }
   }
   .acclaim-card {
     display: grid;
     justify-content: start;
     align-items: center;
-    border: 5px solid rgba(0,0,0,0.03);
+    border: 5px solid rgba(0, 0, 0, 0.03);
     border-radius: 3px;
     padding: 21px;
     text-align: left;
   }
-
-
-
 }
