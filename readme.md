@@ -32,6 +32,16 @@ David Portillo tenor's website built with Jekyll.
 | media             | 1440 x auto |
 | media-thumbnail   |  333 x 299  |
 | acclaim-thumbnail |  326 x 240  |
+| role-thumbnail    |  354 × 240  |
+
+
+## Docs
+
+Jekyll docs are found here - http://jekyllrb.com/docs/installation/
+
+Twitter Bootstrap docs here - https://github.com/twbs/bootstrap-sass
+
+
 
 ### View Staging
 
