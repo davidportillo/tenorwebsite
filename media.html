@@ -89,6 +89,19 @@ hgo-barber-pics:
   - url: "/images/media/HGO-Barber-4.jpg"
 eduardo-pics:
   - url: "/images/media/eduardo.jpg"
+pasquale-pics:
+  - url: "/images/media/pasquale-1.jpg"
+idomeneo-pics:
+  - url: "/images/media/idomeneo-2.jpg"
+  - url: "/images/media/idomeneo-3.jpg"
+  - url: "/images/media/idomeneo-4.jpg"
+  - url: "/images/media/idomeneo-5.jpg"
+  - url: "/images/media/idomeneo-6.jpg"
+  - url: "/images/media/idomeneo-7.jpg"
+  - url: "/images/media/idomeneo-8.jpg"
+  - url: "/images/media/idomeneo-9.jpg"
+  - url: "/images/media/idomeneo-10.jpg"
+  - url: "/images/media/idomeneo-11.jpg"
 ---
 
 <style>
@@ -285,7 +298,7 @@ eduardo-pics:
           </div>
           <div class="col-xs-4 text-center">
             <a
-              href="https://www.amazon.com/Mozart-Die-Entf%FChrung-aus-Serail/dp/B01ISJQT2W/ref=sr_1_1?ie=UTF8&qid=1470670080&sr=8-1&keywords=mozart+portillo"
+              href="https://www.amazon.com/Mozart-Die-Entf%C3%BChrung-aus-Serail/dp/B01F8VZWLC/"
               target="_blank"
             >
               <i class="fa fa-amazon" aria-hidden="true"></i> Amazon
@@ -310,6 +323,45 @@ eduardo-pics:
           alt=""
           class="center-block img-responsive img-rounded featured-image"
         />
+      </div>
+
+      <div class="col-md-4 role-thumb">
+        <a
+          href="{{ site.baseurl }}/images/media/idomeneo-1.jpg"
+          data-lightbox="idomeneo"
+          data-title="c/o Javier del Real | Teatro Real"
+        >
+          <img
+            src="{{ site.baseurl }}/images/media/idomeneo-thumb.jpg"
+            alt="idomeneo"
+            class="center-block img-responsive img-rounded pic-grid"
+          />
+        </a>
+        {% for pic in page.idomeneo-pics %}
+        <a
+          href="{{ site.baseurl }}{{ pic.url }}"
+          data-lightbox="idomeneo"
+          data-title="c/o Javier del Real | Teatro Real"
+        ></a>
+        {% endfor %}
+        <h4 class="text-center image-title">Idamante - Idomeneo</h4>
+      </div>
+
+      <div class="col-md-4 role-thumb">
+        <a
+          href="{{ site.baseurl }}/images/media/pasquale-1.jpg"
+          data-lightbox="pasquale"
+          data-title="c/o Wilfried Hösl"
+        >
+          <img
+            src="{{ site.baseurl }}/images/media/pasquale-thumb2.jpg"
+            alt="pasquale"
+            class="center-block img-responsive img-rounded pic-grid"
+          />
+        </a>
+        <h4 class="text-center image-title">
+          Pasquale - Orlando Paladino
+        </h4>
       </div>
 
       <div class="col-md-4 role-thumb">
