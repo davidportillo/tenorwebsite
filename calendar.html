@@ -3,10 +3,10 @@ layout: default
 title: Calendar
 permalink: /calendar/
 ---
-{% assign current_year = site.time | date: "%Y" %}
-{% assign current_time = site.time | date: "%s" %}
-{% assign old_show_year = "2017" %}
-{% assign events_by_year = site.categories['calendar'] | group_by:"date-year" %}
+
+{% assign current_year = site.time | date: "%Y" %} {% assign current_time =
+site.time | date: "%s" %} {% assign old_show_year = "2017" %} {% assign
+events_by_year = site.categories['calendar'] | group_by:"date-year" %}
 
 <div class="header-image calendar-header-image">
   <h1 class="text-center header-h1">{{ page.title }}</h1>
@@ -14,62 +14,17 @@ permalink: /calendar/
 <!--Current Season-->
 <h2 class="section-h2 text-center">Upcoming Schedule</h2>
 <div class="container calendar-page">
-  {% for year in events_by_year reversed  %}
+  {% for year in events_by_year reversed %}
   <div class="row">
     <div class="col-md-12">
       {% if year.name >= current_year %}
-      <h2 class="text-center calendar-page-h2-year">{{ year.name  | ceil}}</h2>
-      {% endif %}
-    </div>
-  </div>
-  {% for event in year.items reversed %}
-  {% assign upcoming_event_second = event.date-start | date: '%s' %}
-  {% if upcoming_event_second >= current_time %}
-  <div class="row">
-    <div class="col-md-2 col-md-offset-2">
-      <h4 class="calendar-page-date">{{ event.date-start | date:'%B' }}</h4>
-    </div>
-    <div class="text-center col-md-4">
-      <h2 class="calendar-page-event-name">{{ event.title }}</h2>
-      <h4 class="calendar-page-event-role">
-        {% if event.role %}
-        as {{ event.role }}
-        {% else %}
-        as soloist
-        {% endif %}
-      </h4>
-    </div>
-    <div class="col-md-2">
-      <h6 class="calendar-page-event-house hidden-xs">{{ event.opera-house }}</h6>
-      <h6 class="calendar-page-event-location">{{ event.location-city }}, {{ event.location-state }}</h6>
-
-      {% if event.ticket-link and upcoming_event_second >= current_time %}
-      <a href="{{ event.ticket-link }}" target="_blank" class="btn btn-block btn-default calendar-btn">Tickets</a>
-      {% endif %}
-
-    </div>
-    <div class="col-md-8 col-md-offset-2">
-      <hr class="site-row">
-    </div>
-  </div>
-  {% endif %}
-  {% endfor %}
-  {% endfor %}
-
-  <!--Past Seasons-->
-  <br>
-  <h2 class="section-h2 text-center">Past Performances</h2>
-  {% for year in events_by_year  %}
-  <div class="row">
-    <div class="col-md-12">
-      {% if year.name <= current_year and year.name >= old_show_year %}
       <h2 class="text-center calendar-page-h2-year">{{ year.name | ceil}}</h2>
       {% endif %}
     </div>
   </div>
-  {% for event in year.items %}
-  {% assign upcoming_event_year = event.date-start | date: '%Y' %}
-  {% if upcoming_event_year < current_year and upcoming_event_year > old_show_year  %}
+  {% for event in year.items reversed %} {% assign upcoming_event_second =
+  event.date-start | date: '%s' %} {% if upcoming_event_second >= current_time
+  %}
   <div class="row">
     <div class="col-md-2 col-md-offset-2">
       <h4 class="calendar-page-date">{{ event.date-start | date:'%B' }}</h4>
@@ -77,29 +32,75 @@ permalink: /calendar/
     <div class="text-center col-md-4">
       <h2 class="calendar-page-event-name">{{ event.title }}</h2>
       <h4 class="calendar-page-event-role">
-        {% if event.role %}
-        as {{ event.role }}
-        {% else %}
-        as soloist
-        {% endif %}
+        {% if event.role %} as {{ event.role }} {% else %} as soloist {% endif
+        %}
       </h4>
     </div>
     <div class="col-md-2">
-      <h6 class="calendar-page-event-house hidden-xs">{{ event.opera-house }}</h6>
-      <h6 class="calendar-page-event-location">{{ event.location-city }}, {{ event.location-state }}</h6>
+      <h6 class="calendar-page-event-house hidden-xs">
+        {{ event.opera-house }}
+      </h6>
+      <h6 class="calendar-page-event-location">
+        {{ event.location-city }}, {{ event.location-state }}
+      </h6>
+
+      {% if event.ticket-link and upcoming_event_second >= current_time %}
+      <a
+        href="{{ event.ticket-link }}"
+        target="_blank"
+        class="btn btn-block btn-default calendar-btn"
+        >Tickets</a
+      >
+      {% endif %}
     </div>
     <div class="col-md-8 col-md-offset-2">
-      <hr class="site-row">
+      <hr class="site-row" />
     </div>
   </div>
-  {% endif %}
-  {% endfor %}
-  {% endfor %}
+  {% endif %} {% endfor %} {% endfor %}
 
+  <!--Past Seasons-->
+  <br />
+  <h2 class="section-h2 text-center">Past Performances</h2>
+  {% for year in events_by_year %}
+  <div class="row">
+    <div class="col-md-12">
+      {% if year.name <= current_year and year.name > old_show_year %}
+      <h2 class="text-center calendar-page-h2-year">{{ year.name | ceil}}</h2>
+      {% endif %}
+    </div>
+  </div>
+  {% for event in year.items %} {% assign upcoming_event_year = event.date-start
+  | date: '%Y' %} {% if upcoming_event_year < current_year and
+  upcoming_event_year > old_show_year %}
+  <div class="row">
+    <div class="col-md-2 col-md-offset-2">
+      <h4 class="calendar-page-date">{{ event.date-start | date:'%B' }}</h4>
+    </div>
+    <div class="text-center col-md-4">
+      <h2 class="calendar-page-event-name">{{ event.title }}</h2>
+      <h4 class="calendar-page-event-role">
+        {% if event.role %} as {{ event.role }} {% else %} as soloist {% endif
+        %}
+      </h4>
+    </div>
+    <div class="col-md-2">
+      <h6 class="calendar-page-event-house hidden-xs">
+        {{ event.opera-house }}
+      </h6>
+      <h6 class="calendar-page-event-location">
+        {{ event.location-city }}, {{ event.location-state }}
+      </h6>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <hr class="site-row" />
+    </div>
+  </div>
+  {% endif %} {% endfor %} {% endfor %}
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function (event) {
+  document.addEventListener("DOMContentLoaded", function(event) {
     // accordian affect for Ariodante events
     var count = 0;
 
@@ -110,12 +111,11 @@ permalink: /calendar/
       .show();
 
     // hides old_show_year
-    $(".calendar-page-h2-year:contains(2017)").hide()
-
+    $(".calendar-page-h2-year:contains(2017)").hide();
 
     $(".calendar-page-event-location:contains(Various, U.S. and Europe)")
       .next()
-      .click(function (event) {
+      .click(function(event) {
         if (count < 1) {
           event.preventDefault();
           $(".calendar-page-event-name:contains(Ariodante)")
@@ -126,5 +126,4 @@ permalink: /calendar/
         }
       });
   });
-
 </script>
