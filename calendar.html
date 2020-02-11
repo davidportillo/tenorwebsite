@@ -62,13 +62,7 @@ permalink: /calendar/
   {% for year in events_by_year  %}
   <div class="row">
     <div class="col-md-12">
-      <p>----------------</p>
-      <p>{{year}}</p>
-      <p>Year Name is {{year.name | ceil}}</p>
-      <p>Current Year is {{current_year}}</p>
-      <p>Old year is {{old_show_year}}</p>
-      <p>----------------</p>
-      {% if year.name < current_year and year.name > old_show_year %}
+      {% if year.name <= current_year and year.name >= old_show_year %}
       <h2 class="text-center calendar-page-h2-year">{{ year.name | ceil}}</h2>
       {% endif %}
     </div>
@@ -114,6 +108,10 @@ permalink: /calendar/
       .hide()
       .last()
       .show();
+
+    // hides old_show_year
+    $(".calendar-page-h2-year:contains(2017)").hide()
+
 
     $(".calendar-page-event-location:contains(Various, U.S. and Europe)")
       .next()
